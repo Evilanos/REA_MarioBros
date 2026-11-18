@@ -1,67 +1,64 @@
-# Super Mario Bros 3D (Three.js)
+# Super Mario Bros 3D (Three.js) - Orca Workspace
 
-Sebuah game 3D bergaya retro Super Mario Bros yang dibuat menggunakan **Three.js** dengan arsitektur Git Worktree terpisah untuk **Frontend** dan **Backend**.
+Sebuah game 3D Super Mario Bros retro yang dibuat menggunakan **Three.js** dengan arsitektur **Orca Multi-Agent Worktree** terpisah untuk **Frontend** dan **Backend**.
 
 ---
 
-## 🌳 Struktur Git Worktree
+## 🌳 Struktur Orca & Git Worktree
 
-Repository ini menggunakan fitur `git worktree` dengan branch mandiri:
+Project ini terdaftar langsung di **Orca SDK** dengan worktree dan agent panel terpisah:
 
-| Komponen | Git Branch | Direktori Worktree | Deskripsi |
-|---|---|---|---|
-| **Frontend** | `frontend` | [`frontend/`](file:///D:/Juan%20Intern/REA_MarioBros/frontend) | Client game 3D Three.js + Web Audio API synthesizer + HUD pixel retro |
-| **Backend** | `backend` | [`backend/`](file:///D:/Juan%20Intern/REA_MarioBros/backend) | REST API server (Express.js) untuk Leaderboard, Skor, dan Konfigurasi Level |
-| **Main** | `main` | Root repository | Dokumentasi dan root workspace |
+| Komponen | Orca Workspace | Git Branch | Port Default | Deskripsi |
+|---|---|---|---|---|
+| **Frontend** | `frontend` | `frontend` | **`7000`** | Client 3D Three.js Mario + Web Audio API synth + HUD retro |
+| **Backend** | `backend` | `backend` | **`7001`** | REST API Express.js untuk Leaderboard & Level configs (CORS: port 7000) |
+| **Main** | `REA_MarioBros` | `main` | - | Root workspace & orchestrator |
 
-Periksa status worktree kapan saja dengan:
+Periksa status agent dan worktree di Orca kapan saja melalui terminal:
 ```bash
-git worktree list
+orca agent list
+orca worktree list
 ```
 
 ---
 
-## 🎮 Fitur Game 3D Mario (Frontend)
+## 🎮 Fitur Game 3D Mario (Three.js)
 
-1. **Grafis & Lingkungan 3D**:
-   - Model 3D Mario dengan animasi lengan dan kaki saat berlari serta pose lompat khas Mario.
-   - Pemandangan klasik: Langit biru Mario, awan 3D melayang, bukit hijau bertekstur, blok bata terakota, pipa warp hijau, dan kastil di garis akhir.
-   - **Blok Misteri [?]**: Dapat disundul dari bawah, memantul, mengeluarkan koin berputar, efek suara klasik, dan berubah menjadi blok solid kosong.
-   - **Koin Emas**: Berputar 3D dan dapat dikoleksi di sepanjang jalur level.
-   - **Musuh (Goomba)**: Bergerak patroli kiri-kanan. Mario dapat menginjak (stomp) Goomba dari atas untuk mengalahkannya (+200 poin) dan memantul ke udara!
-   - **Tiang Bendera & Kastil**: Menyentuh tiang bendera memicu animasi bendera turun, fanfare kemenangan, dan bonus poin waktu tersisa.
-2. **Audio 8-Bit (Web Audio API)**:
-   - Efek suara sintetis retro tanpa dependensi file audio eksternal (Lompat, Koin, Stomp musuh, Sundul blok, Kena musuh, Game Over, Fanfare menang, dan BGM chiptune).
-3. **Sistem HUD & Leaderboard**:
-   - Tampilan skor, jumlah koin, dunia (1-1), countdown waktu (300 detik), dan sisa nyawa (❤️ x3).
-   - Modal Hall of Fame / Leaderboard yang terhubung langsung ke REST API Backend.
+1. **Model Mario 3D Modular**:
+   - Karakter 3D (topi, kumis, hidung 3D, overalls, sarung tangan, sepatu).
+   - Animasi siklus lari berayun dan pose melompat khas Mario.
+2. **Lingkungan & Platforming**:
+   - **Blok Misteri `[?]`**: Disundul dari bawah, memantul, mengeluarkan koin melayang, suara ding, dan berubah jadi blok kosong.
+   - **Blok Bata & Pipa Hijau**: Rintangan platforming dan ketinggian bervariasi.
+   - **Musuh Goomba**: AI patroli waddling; dapat diinjak (*stomp*) dari atas (+200 poin) untuk mengalahkannya.
+   - **Tiang Bendera & Kastil**: Memicu animasi bendera turun, fanfare, dan perhitungan skor akhir.
+3. **Audio 8-Bit (Web Audio API)**:
+   - Sintesis suara retro mandiri tanpa file audio eksternal.
+4. **Leaderboard REST API**:
+   - Terhubung langsung ke backend pada port `7001` (dengan fallback penyimpanan lokal jika backend offline).
 
 ---
 
 ## ⚡ Cara Menjalankan
 
-### 1. Menjalankan Backend (Port 3001)
-Buka terminal baru di direktori `backend/`:
+### 1. Menjalankan Backend (Port 7001)
 ```bash
 cd backend
 npm start
 ```
-* API Health: http://localhost:3001/api/health
-* Leaderboard: http://localhost:3001/api/leaderboard
+* **Health Check**: http://localhost:7001/api/health
+* **Leaderboard API**: http://localhost:7001/api/leaderboard
 
-### 2. Menjalankan Frontend (Port 5173)
-Buka terminal di direktori `frontend/`:
+### 2. Menjalankan Frontend (Port 7000)
 ```bash
 cd frontend
 npm run dev
 ```
-Buka browser di URL yang ditampilkan (biasanya http://localhost:5173).
+Buka browser di **http://localhost:7000**.
 
 ---
 
 ## 🕹️ Kontrol Permainan
-
-- **Bergerak Kiri / Kanan**: `A` / `D` atau tombol panah `◀` / `▶`
-- **Melompat**: `W` / `Space` atau tombol panah `▲` (atau tombol **A** di layar)
-- **Sprint / Lari Cepat**: `Shift` atau `J` (atau tombol **B** di layar)
-- **Kontrol Sentuh**: Tombol D-Pad dan Action Buttons tersedia di layar untuk layar sentuh / mobile.
+- **Gerak**: `A` / `D` atau panah `◀` / `▶`
+- **Lompat**: `Space` / `W` / `▲` (atau tombol **A** di layar)
+- **Sprint**: `Shift` / `J` (atau tombol **B** di layar)
