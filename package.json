@@ -1,0 +1,14 @@
+{
+  "name": "rea-mario-bros-workspace",
+  "version": "1.0.0",
+  "description": "Super Mario Bros 3D workspace with separate worktrees for frontend and backend",
+  "scripts": {
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": ["mario", "threejs", "worktree", "backend", "frontend"],
+  "author": "Juan Fredo Alexius",
+  "license": "MIT"
+}
