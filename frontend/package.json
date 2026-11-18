@@ -1,0 +1,17 @@
+{
+  "name": "mario-bros-frontend",
+  "version": "1.0.0",
+  "description": "3D Mario Bros game with Three.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 7000",
+    "build": "vite build",
+    "preview": "vite preview --port 7000"
+  },
+  "dependencies": {
+    "three": "^0.182.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

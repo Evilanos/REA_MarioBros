@@ -1,0 +1,83 @@
+[
+  {
+    "id": "score-1794975152760-3927",
+    "playerName": "PeachTester",
+    "score": 99999,
+    "coins": 50,
+    "world": "1-1",
+    "timeRemaining": 280,
+    "createdAt": "2026-11-18T04:12:32.760Z"
+  },
+  {
+    "id": "score-1794975459034-3730",
+    "playerName": "PeachTester",
+    "score": 99999,
+    "coins": 50,
+    "world": "1-1",
+    "timeRemaining": 280,
+    "createdAt": "2026-11-18T04:17:39.034Z"
+  },
+  {
+    "id": "score-1",
+    "playerName": "Mario",
+    "score": 12500,
+    "coins": 24,
+    "world": "1-1",
+    "timeRemaining": 215,
+    "createdAt": "2026-11-18T08:00:00.000Z"
+  },
+  {
+    "id": "score-2",
+    "playerName": "Luigi",
+    "score": 9800,
+    "coins": 18,
+    "world": "1-1",
+    "timeRemaining": 180,
+    "createdAt": "2026-11-18T08:30:00.000Z"
+  },
+  {
+    "id": "score-3",
+    "playerName": "Peach",
+    "score": 8400,
+    "coins": 15,
+    "world": "1-1",
+    "timeRemaining": 195,
+    "createdAt": "2026-11-18T09:00:00.000Z"
+  },
+  {
+    "id": "score-4",
+    "playerName": "Toad",
+    "score": 6200,
+    "coins": 11,
+    "world": "1-1",
+    "timeRemaining": 160,
+    "createdAt": "2026-11-18T09:30:00.000Z"
+  },
+  {
+    "id": "score-5",
+    "playerName": "Yoshi",
+    "score": 4500,
+    "coins": 8,
+    "world": "1-1",
+    "timeRemaining": 140,
+    "createdAt": "2026-11-18T10:00:00.000Z"
+  },
+  {
+    "id": "score-1794975152768-4356",
+    "playerName": "scriptalert(1)/scriptMarioFan",
+    "score": 500,
+    "coins": 0,
+    "world": "1-1",
+    "timeRemaining": 0,
+    "createdAt": "2026-11-18T04:12:32.768Z"
+  },
+  {
+    "id": "score-1794975459085-3095",
+    "playerName": "scriptalert(1)/scriptMarioFan",
+    "score": 500,
+    "coins": 0,
+    "world": "1-1",
+    "timeRemaining": 0,
+    "createdAt": "2026-11-18T04:17:39.085Z"
+  }
+]

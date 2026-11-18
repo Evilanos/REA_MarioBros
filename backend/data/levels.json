@@ -1,0 +1,28 @@
+{
+  "levels": [
+    {
+      "id": "1-1",
+      "name": "World 1-1: Grassland",
+      "theme": "overworld",
+      "skyColor": "#5c94fc",
+      "groundColor": "#61a029",
+      "timeLimit": 300,
+      "length": 180,
+      "marioStart": { "x": 0, "y": 2, "z": 0 },
+      "flagPosition": { "x": 160, "y": 0, "z": 0 },
+      "castlePosition": { "x": 170, "y": 0, "z": 0 }
+    },
+    {
+      "id": "1-2",
+      "name": "World 1-2: Underground Caverns",
+      "theme": "underground",
+      "skyColor": "#050510",
+      "groundColor": "#1a4268",
+      "timeLimit": 350,
+      "length": 220,
+      "marioStart": { "x": 0, "y": 2, "z": 0 },
+      "flagPosition": { "x": 195, "y": 0, "z": 0 },
+      "castlePosition": { "x": 208, "y": 0, "z": 0 }
+    }
+  ]
+}
